@@ -17,7 +17,8 @@ for root, dirs, files in os.walk(toRootPath, topdown = False):
 li = glob.glob(fromRootPath + '/**/src/', recursive = True)
 for fromSrcPath in li:
   # Exception 1: Avoid projects in each directories.
-  if fromSrcPath == '../01_platformio/04_sensor/acceleration_2d_1/src/'\
+  if fromSrcPath == '../01_platformio/01_button/01_alternate/src/'\
+    or fromSrcPath == '../01_platformio/04_sensor/acceleration_2d_1/src/'\
     or fromSrcPath == '../01_platformio/04_sensor/acceleration_2d_2/src/'\
     or fromSrcPath == '../01_platformio/04_sensor/acceleration_2d_3/src/'\
     or fromSrcPath == '../01_platformio/04_sensor/direction_1/src/'\
