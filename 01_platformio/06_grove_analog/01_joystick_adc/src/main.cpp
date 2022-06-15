@@ -16,6 +16,7 @@ void setup() {
 }
 
 void loop() {
+  // JOYSTICKのための処理
   Wire.requestFrom(JOYSTICK_ADDRESS, 3);
   if (Wire.available()) {  // スレーブからデータが帰ってきた場合の分岐
     x_data = Wire.read();
@@ -35,6 +36,8 @@ void loop() {
     M5.Lcd.print(button_data);
     M5.Lcd.print("      ");
   }
+
+  // ADCのための処理
   Wire.requestFrom(ADC_ADDRESS, 2);
   if (Wire.available()) {
     adc_value = (Wire.read() & 0x0f) << 8;
