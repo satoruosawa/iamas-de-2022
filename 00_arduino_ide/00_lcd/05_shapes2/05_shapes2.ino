@@ -5,7 +5,7 @@ bool flag = true;  // flagという名前の真偽値をグローバル領域に
 void setup() { M5.begin(); }
 
 void loop() {
-  if (flag) {
+  if (flag) {                                 // flagの値で判定
     M5.Lcd.fillRect(90, 50, 140, 140, BLUE);  // flagがtrueの場合の処理
   } else {
     M5.Lcd.fillRect(90, 50, 140, 140, RED);  // flagがfalseの場合の処理

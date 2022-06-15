@@ -31,7 +31,7 @@ void loop() {
       is_measuring = true;
     }
   }
-  int x = fmod(measure_sec, 10) / 10 * 320;  // fmodは10で割った余り
+  int x = fmod(measure_sec, 10) / 10 * 320;  // fmod(x, y)はxをyで割った余り
   int y = floor(measure_sec / 10);           // floorは切り捨て
 
   M5.Lcd.drawRect(x, y * 20 + 40, 1, 18, WHITE);
